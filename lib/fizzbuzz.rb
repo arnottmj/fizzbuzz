@@ -1,11 +1,16 @@
-def is_divisible_by? (num,div)
-  num % div == 0
+class Integer
+
+def fizzbuzz
+  return 'fizzbuzz' if self.is_divisible_by?(15)
+  return 'fizz' if self.is_divisible_by?(3)
+  return 'buzz' if self.is_divisible_by?(5)
+  self
+end
+
+def is_divisible_by? div
+  self % div == 0
+end
+
 end
 
 
-def fizzbuzz(num)
-  return 'fizzbuzz' if is_divisible_by?(num, 15)
-  return 'fizz' if is_divisible_by?(num, 3)
-  return 'buzz' if is_divisible_by?(num, 5)
-  num
-end
